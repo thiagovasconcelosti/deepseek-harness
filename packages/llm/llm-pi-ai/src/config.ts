@@ -179,7 +179,7 @@ export interface PiAiProviderProfile {
   requestImageMaxBytes?: number
   /** Provider-owned model-request retry policy; omission uses normal mode with five retries. */
   retryPolicy?: RetryPolicyConfig
-  /** Opencode-go header */
+  /** Optional HTTP header that receives the model request's session id. */
   sessionHeader?: string
 }
 

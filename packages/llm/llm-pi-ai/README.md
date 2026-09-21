@@ -242,3 +242,4 @@ This Dev Note is non-authoritative working context: undecided directions and not
 </details>
 
 **Runtime invariant:** No companion is published. This package exposes no independent event sequence or mutable data relation beyond contracts enforced at its owning seam.
+| `sessionHeader` | absent | HTTP header that receives the request session id when one is available |

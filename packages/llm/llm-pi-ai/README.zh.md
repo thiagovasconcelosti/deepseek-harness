@@ -242,3 +242,4 @@ pi-ai 事件变成 harness 的推理、文本、工具调用、用量与 finish 
 </details>
 
 **运行时不变式：** 不发布伴生入口。本包没有独立事件序列或可变数据关系，相关约定在所属 seam 强制执行。
+| `sessionHeader` | 无 | 有请求 session id 时承载该 id 的 HTTP header |
