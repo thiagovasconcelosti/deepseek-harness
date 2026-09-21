@@ -179,6 +179,8 @@ export interface PiAiProviderProfile {
   requestImageMaxBytes?: number
   /** Provider-owned model-request retry policy; omission uses normal mode with five retries. */
   retryPolicy?: RetryPolicyConfig
+  /** Opencode-go header */
+  sessionHeader?: string
 }
 
 /** Validated profile with its route stamped and every adapter-owned default resolved. */
@@ -342,6 +344,7 @@ const profile = z.object({
   requestImagePixelBudget: z.number().step(1).min(1).default(DEFAULT_REQUEST_IMAGE_PIXEL_BUDGET),
   requestImageMaxBytes: z.number().step(1).min(1).default(DEFAULT_REQUEST_IMAGE_MAX_BYTES),
   retryPolicy: RetryPolicySchema,
+  sessionHeader: z.string(),
 })
 
 /** Runtime schema for {@link Config}. */
